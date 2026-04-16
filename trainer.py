@@ -64,8 +64,8 @@ else:
 
 print(f"Using device: {device}")
     
-from model import ECGEfficientNet  # หรือ ECGMobileNet, ECGDenseNet
-model = ECGEfficientNet().to(device)
+from model import ECGMobileNet  # หรือ ECGMobileNet, ECGDenseNet
+model = ECGMobileNet().to(device)
 
 print(model)
 
@@ -125,7 +125,7 @@ print("Done!")
 
 # Evaluate on the Test Set
 # Load the best model
-model_best = ECGEfficientNet().to(device)
+model_best = ECGMobileNet().to(device)
 model_best.load_state_dict(torch.load("model_best_vloss.pth"))
 
 model_best.eval() 
